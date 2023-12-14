@@ -1,0 +1,61 @@
+{
+  "compileOnSave": true,
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "include": [
+    "*.ts",
+    "*.json",
+    "**/*.ts"
+  ],
+  "ts-node": {
+    "esm": true
+  },
+  "compilerOptions": {
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "target": "ESNext",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "allowImportingTsExtensions": true,
+    "exactOptionalPropertyTypes": false,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "strictBindCallApply": true,
+    "useUnknownInCatchVariables": true,
+    "composite": true,
+    "declarationMap": true,
+    "incremental": true,
+    "esModuleInterop": true,
+    "skipLibCheck": false,
+    "strictPropertyInitialization": false,
+    "preserveConstEnums": true,
+    "strictFunctionTypes": true,
+    "noUncheckedIndexedAccess": false,
+    "allowUnusedLabels": false,
+    "allowUnreachableCode": false,
+    "declaration": true,
+    "sourceMap": true,
+    "rootDir": "./",
+    "noEmit": true,
+    "importHelpers": true,
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "allowSyntheticDefaultImports": true,
+    "inlineSources": true,
+    "experimentalDecorators": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmitOnError": true
+  }
+}

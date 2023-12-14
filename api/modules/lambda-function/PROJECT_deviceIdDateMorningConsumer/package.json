@@ -1,0 +1,21 @@
+{
+  "name": "deviceidmorningproducer",
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "type": "module",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "npm run prebuild && ../../../node_modules/.bin/tsc && ../../../node_modules/.bin/esbuild index.ts --bundle --sourcemap --platform=node --target=es2022 --outfile=dist/index.js",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "lint": "npx eslint ",
+    "watch": "tsc -b ../../tsconfig.json --watch --verbose"
+  }
+}

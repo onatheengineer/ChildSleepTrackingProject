@@ -1,0 +1,68 @@
+{
+  "name": "libscripts",
+  "workspaces": [
+    "../../schema",
+    "../../utils"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ],
+  "type": "module",
+  "version": "1.0.0",
+  "scripts": {
+    "check-clean-workspace-after-install": "git diff --quiet --exit-code",
+    "check-configs": "nx run-many --target=check-configs --parallel",
+    "check-docs": "nx run-many --target=check-docs --parallel",
+    "check-spelling": "cspell --config=.cspell.json \"**/*.{md,mdx,ts,mts,cts,js,cjs,mjs,tsx,jsx}\"",
+    "clean": "lerna clean -y && nx run-many --target=clean",
+    "lint-fix": "eslint node --fix",
+    "lint": "nx run-many --target=lint --parallel",
+    "start": "nx run website:start",
+    "test": "nx run-many --target=test --parallel",
+    "test-integration": "npm jest -c ./tests/integration/jest.config.js",
+    "typecheck": "nx run-many --target=typecheck --parallel",
+    "terraform-fmt": "docker-compose -f docker-compose.yml run --rm terraform fmt --recursive",
+    "terraform-init": "docker-compose -f docker-compose.yml run --rm terraform init",
+    "terraform-validate": "docker-compose -f docker-compose.yml run --rm terraform validate",
+    "terraform-plan": "docker-compose -f docker-compose.yml run --rm terraform plan",
+    "terraform-apply": "docker-compose -f docker-compose.yml run --rm terraform apply --auto-approve"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.115",
+    "@types/http-errors": "^2.0.1",
+    "@types/node": "^18.16.3",
+    "@types/uuid": "^9.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.59.2",
+    "eslint": "^8.39.0",
+    "eslint-config-standard-with-typescript": "^34.0.1",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-n": "^15.7.0",
+    "eslint-plugin-promise": "^6.1.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@aws-lambda-powertools/logger": "^1.8.0",
+    "@aws-lambda-powertools/metrics": "^1.8.0",
+    "@aws-lambda-powertools/tracer": "^1.8.0",
+    "@aws-sdk/client-dynamodb": "^3.325.0",
+    "@aws-sdk/client-lambda": "^3.325.0",
+    "@aws-sdk/client-s3": "^3.325.0",
+    "@aws-sdk/client-secrets-manager": "^3.328.0",
+    "@aws-sdk/lib-dynamodb": "^3.325.0",
+    "@aws-sdk/types": "^3.310.0",
+    "@aws-sdk/util-dynamodb": "^3.325.0",
+    "@types/mysql": "^2.15.21",
+    "@typescript-eslint/parser": "^5.59.2",
+    "esbuild": "^0.17.18",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "http-errors": "^2.0.0",
+    "mysql": "^2.18.1",
+    "upgrade": "^1.1.0",
+    "uuid": "^9.0.0"
+  }
+}

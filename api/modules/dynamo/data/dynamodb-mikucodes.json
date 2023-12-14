@@ -1,0 +1,74 @@
+{
+  "Item1": {
+    "PROJECTCodeKey": {
+      "S": "PROJECT10"
+    },
+    "description": {
+      "S": "Had a Fever"
+    }
+  },
+  "Item2": {
+    "PROJECTCodeKey": {
+      "S": "PROJECT20"
+    },
+    "description": {
+      "S": "Cough"
+    }
+  },
+  "Item3": {
+    "PROJECTCodeKey": {
+      "S": "PROJECT30"
+    },
+    "description": {
+      "S": "Been sick"
+    }
+  },
+  "Item4": {
+    "PROJECTCodeKey": {
+      "S": "PROJECT40"
+    },
+    "description": {
+      "S": "Sneeze"
+    }
+  },
+  "Item5": {
+    "PROJECTCodeKey": {
+      "S": "PROJECT50"
+    },
+    "description": {
+      "S": "Change in feeding habit"
+    }
+  },
+  "Item6": {
+    "PROJECTCodeKey": {
+      "S": "PROJECT60"
+    },
+    "description": {
+      "S": "Had congestion (runny nose)"
+    }
+  },
+  "Item7": {
+    "PROJECTCodeKey": {
+      "S": "PROJECT70"
+    },
+    "description": {
+      "S": "Respiratory distress/trouble breathing"
+    }
+  },
+  "Item8": {
+    "PROJECTCodeKey": {
+      "S": "PROJECT80"
+    },
+    "description": {
+      "S": "Been more fussy than usual"
+    }
+  },
+  "Item9": {
+    "PROJECTCodeKey": {
+      "S": "PROJECT9999"
+    },
+    "description": {
+      "S": "Other"
+    }
+  }
+}

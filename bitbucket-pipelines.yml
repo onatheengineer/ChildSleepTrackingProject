@@ -1,0 +1,130 @@
+#  NodeJS and Terraform build
+
+pipelines:
+  default:
+    - step:
+        name: running eslint
+        image: node:18.16.1
+        script:
+          - cd api
+          - npm install eslint
+          - node_modules/eslint/bin/eslint.js
+        condition:
+          changesets:
+            includePaths:
+              - "api/**"
+    - step:
+        name: Terraform fmt
+        image: hashicorp/terraform:latest
+        script:
+          - cd api
+          - terraform init
+          - terraform validate
+          - terraform fmt
+        condition:
+          changesets:
+            includePaths:
+              - "api/**"
+  pull-requests:
+    '**':
+      - step:
+          name: PR Terraform Plan
+          image: hashicorp/terraform:latest
+          script:
+            - cd api
+            - terraform init
+            - terraform workspace select test || terraform workspace new test
+            - terraform validate
+            - terraform plan
+          condition:
+            changesets:
+              includePaths:
+                - "api/**"
+  branches:
+    main:
+      - step:
+          name: Terraform Plan Test
+          image: hashicorp/terraform:latest
+          script:
+            - cd api
+            - terraform init
+            - terraform workspace select test || terraform workspace new test
+            - terraform validate
+            - terraform plan
+          condition:
+            changesets:
+              includePaths:
+                - "api/**"
+      - step:
+          name: Terraform Apply Test
+          image: hashicorp/terraform:latest
+          deployment: test
+          script:
+            - cd api
+            - terraform init
+            - terraform workspace select test || terraform workspace new test
+            - terraform validate
+            - terraform plan
+            - terraform apply -input=false -auto-approve
+          condition:
+            changesets:
+              includePaths:
+                - "api/**"
+      - step:
+          name: Terraform Plan Stage
+          image: hashicorp/terraform:latest
+          script:
+            - cd api
+            - terraform init
+            - terraform workspace select stage || terraform workspace new stage
+            - terraform validate
+            - terraform plan
+          condition:
+            changesets:
+              includePaths:
+                - "api/**"
+      - step:
+          name: Terraform Apply Stage
+          image: hashicorp/terraform:latest
+          deployment: stage
+          script:
+            - cd api
+            - terraform init
+            - terraform workspace select stage || terraform workspace new stage
+            - terraform validate
+            - terraform plan
+            - terraform apply -input=false -auto-approve
+          condition:
+            changesets:
+              includePaths:
+                - "api/**"
+          trigger: manual
+      - step:
+          name: Terraform Plan Production
+          image: hashicorp/terraform:latest
+          script:
+            - cd api
+            - terraform init
+            - terraform workspace select prod || terraform workspace new prod
+            - terraform validate
+            - terraform plan
+          condition:
+            changesets:
+              includePaths:
+                - "api/**"
+      - step:
+          name: Terraform Apply Production
+          image: hashicorp/terraform:latest
+          deployment: prod
+          script:
+            - cd api
+            - terraform init
+            - terraform workspace select prod || terraform workspace new prod
+            - terraform validate
+            - terraform plan
+            - terraform apply -input=false -auto-approve
+          condition:
+            changesets:
+              includePaths:
+                - "api/**"
+          trigger: manual
