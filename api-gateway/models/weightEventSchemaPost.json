@@ -1,0 +1,25 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Post Weight Model",
+  "type": "object",
+  "properties": {
+    "weight": {
+      "type": "number"
+    },
+    "refDate": {
+      "type": "string"
+    },
+    "units": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "refDate",
+    "weight",
+    "units"
+  ],
+  "additionalProperties": false
+}

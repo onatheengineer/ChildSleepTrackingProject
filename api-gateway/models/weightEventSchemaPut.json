@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Put Weight Model",
+  "type": "object",
+  "properties": {
+    "weight_id": {
+      "type": "string"
+    },
+    "refDate": {
+      "type": "string"
+    },
+    "weight": {
+      "type": "number"
+    },
+    "units": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "weight_id"
+  ],
+  "additionalProperties": false
+}

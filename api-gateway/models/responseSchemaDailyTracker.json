@@ -1,0 +1,21 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Dailytracker Response Schema",
+  "type": "object",
+  "properties": {
+    "feature": {
+      "type": "string"
+    },
+    "data": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "feature",
+    "data"
+  ],
+  "additionalProperties": true
+}

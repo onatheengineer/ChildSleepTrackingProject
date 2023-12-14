@@ -1,0 +1,41 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Response Health Issue Model",
+  "type": "object",
+  "properties": {
+    "deviceId": {
+      "type": "string"
+    },
+    "subject_id": {
+      "type": "string"
+    },
+    "PROJECTCode": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "symptom": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "isSurvey": {
+      "type": "boolean"
+    },
+    "initialResponse": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "healthissue_id"
+  ],
+  "additionalProperties": true
+}

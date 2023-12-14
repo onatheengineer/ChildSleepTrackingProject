@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Put Diaper Model",
+  "type": "object",
+  "properties": {
+    "diaper_id": {
+      "type": "string"
+    },
+    "refDate": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "diaper_id"
+  ],
+  "additionalProperties": false
+}

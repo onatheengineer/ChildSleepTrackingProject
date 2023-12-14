@@ -1,0 +1,30 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "response diaper model",
+  "type": "object",
+  "properties": {
+    "diaper_id": {
+      "type": "string"
+    },
+    "subject_id": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "diaper_id",
+    "createdAt"
+  ],
+  "additionalProperties": true
+}

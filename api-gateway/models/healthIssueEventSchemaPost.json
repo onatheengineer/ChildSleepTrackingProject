@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "post healthissue model",
+  "type": "object",
+  "properties": {
+    "refDate": {
+      "type": "string"
+    },
+    "PROJECTCode": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "initialResponse": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "refDate",
+    "PROJECTCode"
+  ],
+  "additionalProperties": false
+}

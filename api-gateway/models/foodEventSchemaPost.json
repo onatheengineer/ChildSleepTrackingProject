@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "post food model",
+  "type": "object",
+  "properties": {
+    "delivery": {
+      "type": "string"
+    },
+    "refDate": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string"
+    },
+    "solidFoodType": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "units": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "refDate",
+    "category",
+    "delivery",
+    "units"
+  ],
+  "additionalProperties": false
+}

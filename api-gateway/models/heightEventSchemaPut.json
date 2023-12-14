@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Put Height Model",
+  "type": "object",
+  "properties": {
+    "height_id": {
+      "type": "string"
+    },
+    "refDate": {
+      "type": "string"
+    },
+    "subHeight": {
+      "type": "number"
+    },
+    "height": {
+      "type": "number"
+    },
+    "units": {
+      "type": "string"
+    },
+    "subUnits": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "height_id"
+  ],
+  "additionalProperties": false
+}

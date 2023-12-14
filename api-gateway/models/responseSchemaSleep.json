@@ -1,0 +1,14 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Response Schema Sleep",
+  "type": "object",
+  "properties": {
+    "SleepScore": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "subject_id"
+  ],
+  "additionalProperties": true
+}

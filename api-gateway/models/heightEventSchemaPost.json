@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "post height model",
+  "type": "object",
+  "properties": {
+    "refDate": {
+      "type": "string"
+    },
+    "height": {
+      "type": "number"
+    },
+    "subHeight": {
+      "type": "number"
+    },
+    "units": {
+      "type": "string"
+    },
+    "subUnits": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "refDate",
+    "height",
+    "units",
+    "subUnits"
+  ],
+  "additionalProperties": false
+}

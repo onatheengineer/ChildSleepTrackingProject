@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Put Temperature Model",
+  "type": "object",
+  "properties": {
+    "temperature_id": {
+      "type": "string"
+    },
+    "refDate": {
+      "type": "string"
+    },
+    "degree": {
+      "type": "number"
+    },
+    "units": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "temperature_id"
+  ],
+  "additionalProperties": false
+}

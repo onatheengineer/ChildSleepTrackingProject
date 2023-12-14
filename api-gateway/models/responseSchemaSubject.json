@@ -1,0 +1,27 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "subject response 200 model",
+  "type": "object",
+  "properties": {
+    "subject_id": {
+      "type": "string"
+    },
+    "deviceId": {
+      "type": "string"
+    },
+    "dob": {
+      "type": "string"
+    },
+    "subscriptionStatus": {
+      "type": "boolean"
+    },
+    "createdAt": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "subject_id",
+    "deviceId"
+  ],
+  "additionalProperties": false
+}

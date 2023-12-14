@@ -1,0 +1,35 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Response Height Model",
+  "type": "object",
+  "properties": {
+    "height_id": {
+      "type": "string"
+    },
+    "subject_id": {
+      "type": "string"
+    },
+    "height": {
+      "type": "number"
+    },
+    "subHeight": {
+      "type": "number"
+    },
+    "units": {
+      "type": "string"
+    },
+    "subUnits": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "height_id"
+  ],
+  "additionalProperties": true
+}

@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Graph Response Schema Respiratory",
+  "type": "object",
+  "properties": {
+    "label": {
+      "type": "string"
+    },
+    "labelDate": {
+      "type": "string"
+    },
+    "mean": {
+      "type": "number"
+    },
+    "RPM": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": true
+}

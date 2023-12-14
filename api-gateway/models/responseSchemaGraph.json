@@ -1,0 +1,20 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Graph Response Schema",
+  "type": "object",
+  "properties": {
+    "label": {
+      "type": "string"
+    },
+    "labelDate": {
+      "type": "string"
+    },
+    "dataPoints": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": true
+}

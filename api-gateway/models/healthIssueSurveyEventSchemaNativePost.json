@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Post Response Health Issue Model Native",
+  "type": "object",
+  "properties": {
+    "deviceId": {
+      "type": "string"
+    },
+    "userId": {
+      "type": "string"
+    },
+    "initialResponse": {
+      "type": "string"
+    },
+    "language": {
+      "type": "string"
+    },
+    "createdAt": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "deviceId"
+  ],
+  "additionalProperties": true
+}

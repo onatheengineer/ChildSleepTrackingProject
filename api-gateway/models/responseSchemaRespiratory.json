@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "title": "Respiratory Response Schema",
+  "type": "object",
+  "properties": {
+    "lastUpdatedAt": {
+      "type": "string"
+    },
+    "attention": {
+      "type": "string"
+    },
+    "statement": {
+      "type": "string"
+    },
+    "middleNumberRPM": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "subject_id",
+    "refDate"
+  ],
+  "additionalProperties": true
+}
